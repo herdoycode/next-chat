@@ -30,13 +30,17 @@ const MessageTop = () => {
         <Box display={{ initial: "block", md: "none" }} className="text-2xl">
           <FaChevronLeft />
         </Box>
-        <Avatar
-          width="50px"
-          height="50px"
-          fallback="u"
-          radius="full"
-          src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-        />
+        <div className="avatar online">
+          <div className="w-10 rounded-full">
+            <img
+              src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+              alt="user"
+            />
+          </div>
+        </div>
+        <Text weight="medium" as="p">
+          Olivia
+        </Text>
       </Flex>
       <Flex align="center" gap="6">
         <DropdownMenu.Root>

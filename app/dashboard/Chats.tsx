@@ -1,11 +1,9 @@
 "use client";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
-import { Avatar, Box, Flex, Text, Heading, TextField } from "@radix-ui/themes";
-import React, { use, useState } from "react";
+import { Box, Flex, Heading, Text, TextField } from "@radix-ui/themes";
 
 const Chats = () => {
   const activeUser = [1, 2, 3, 4];
-  const [tx, setTx] = useState<number>(0);
   return (
     <Box p="3">
       <Heading weight="medium" size="5" as="h2">
@@ -27,13 +25,14 @@ const Chats = () => {
               className="cursor-pointer"
               justify="center"
             >
-              <Avatar
-                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                width="40px"
-                height="40px"
-                fallback="U"
-                radius="full"
-              />
+              <div className="avatar online">
+                <div className="w-10 rounded-full">
+                  <img
+                    src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                    alt="user"
+                  />
+                </div>
+              </div>
               <Text size="2" as="p">
                 Herdoy
               </Text>

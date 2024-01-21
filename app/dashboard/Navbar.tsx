@@ -43,7 +43,7 @@ const Navbar = () => {
             <DropdownMenu.Trigger>
               <button className="outline-none border-none">
                 <Avatar
-                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  src="https://i.ibb.co/CJzdzdc/me.jpg"
                   width="35px"
                   height="35px"
                   fallback="U"
