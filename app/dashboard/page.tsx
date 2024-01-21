@@ -1,4 +1,5 @@
 import { Box, Grid } from "@radix-ui/themes";
+import Navbar from "./Navbar";
 
 const Dashboard = () => {
   return (
@@ -13,7 +14,7 @@ const Dashboard = () => {
         height={{ initial: "9", md: "auto" }}
         className="bg-gray-200"
       >
-        menu
+        <Navbar />
       </Box>
       <Box className="bg-gray-100">aside</Box>
       <Box
