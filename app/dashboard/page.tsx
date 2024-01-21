@@ -1,5 +1,7 @@
 import { Box, Grid } from "@radix-ui/themes";
 import Navbar from "./Navbar";
+import Chats from "./Chats";
+import Messages from "./Messages";
 
 const Dashboard = () => {
   return (
@@ -16,13 +18,15 @@ const Dashboard = () => {
       >
         <Navbar />
       </Box>
-      <Box className="bg-gray-100">aside</Box>
+      <Box className="bg-gray-100">
+        <Chats />
+      </Box>
       <Box
         position={{ initial: "fixed", md: "static" }}
         right={{ initial: "100%", md: "auto" }}
         width="100%"
       >
-        messages
+        <Messages />
       </Box>
     </Grid>
   );
