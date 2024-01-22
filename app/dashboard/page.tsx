@@ -1,12 +1,12 @@
 import { Box, Grid } from "@radix-ui/themes";
-import Navbar from "./Navbar";
 import Chats from "./Chats";
 import Messages from "./Messages";
+import Navbar from "./Navbar";
 
 const Dashboard = () => {
   return (
     <Grid
-      columns={{ md: "70px 300px 1fr", initial: "1fr" }}
+      columns={{ md: "70px 350px 1fr", initial: "1fr" }}
       className="h-screen"
     >
       <Box

@@ -1,11 +1,12 @@
 "use client";
-import { Avatar, Box, DropdownMenu, Flex } from "@radix-ui/themes";
+import { Box, DropdownMenu, Flex } from "@radix-ui/themes";
 import { BsChatDots, BsMessenger } from "react-icons/bs";
 import { FaRegUser } from "react-icons/fa6";
 import { GoGear } from "react-icons/go";
 import { LuMoon } from "react-icons/lu";
 import { MdExitToApp } from "react-icons/md";
 import { PiUserListLight } from "react-icons/pi";
+import Avatar from "../components/Avatar";
 
 const Navbar = () => {
   return (
@@ -42,13 +43,7 @@ const Navbar = () => {
           <DropdownMenu.Root>
             <DropdownMenu.Trigger>
               <button className="outline-none border-none">
-                <Avatar
-                  src="https://i.ibb.co/CJzdzdc/me.jpg"
-                  width="35px"
-                  height="35px"
-                  fallback="U"
-                  radius="full"
-                />
+                <Avatar online={false} src="/user.jpg" />
               </button>
             </DropdownMenu.Trigger>
             <DropdownMenu.Content>

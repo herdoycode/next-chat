@@ -1,4 +1,5 @@
-import { Avatar, Box } from "@radix-ui/themes";
+import { Box } from "@radix-ui/themes";
+import Avatar from "../components/Avatar";
 
 const MessageBody = () => {
   const chatItems = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -9,13 +10,7 @@ const MessageBody = () => {
           <div className="chat chat-start">
             <div className="chat-image avatar">
               <div className="w-10 rounded-full">
-                <Avatar
-                  width="50px"
-                  height="50px"
-                  fallback="u"
-                  radius="full"
-                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                />
+                <Avatar online={false} src="/user.jpg" />
               </div>
             </div>
             <div className="chat-bubble bg-gray-200 text-zinc-900">
@@ -26,13 +21,7 @@ const MessageBody = () => {
           <div className="chat chat-end">
             <div className="chat-image avatar">
               <div className="w-10 rounded-full">
-                <Avatar
-                  width="50px"
-                  height="50px"
-                  fallback="u"
-                  radius="full"
-                  src="https://i.ibb.co/CJzdzdc/me.jpg"
-                />
+                <Avatar online={false} src="/me.jpg" />
               </div>
             </div>
             <div className="chat-bubble bg-[--accent-9]">

@@ -1,12 +1,5 @@
 "use client";
-import {
-  Avatar,
-  Box,
-  DropdownMenu,
-  Flex,
-  Text,
-  TextField,
-} from "@radix-ui/themes";
+import { Box, DropdownMenu, Flex, Text, TextField } from "@radix-ui/themes";
 import { BsThreeDots } from "react-icons/bs";
 import { FaChevronLeft, FaRegUser } from "react-icons/fa";
 import { HiOutlineArchiveBox } from "react-icons/hi2";
@@ -16,6 +9,7 @@ import {
   IoVideocamOutline,
 } from "react-icons/io5";
 import { RiDeleteBinLine, RiVolumeMuteLine } from "react-icons/ri";
+import Avatar from "../components/Avatar";
 
 const MessageTop = () => {
   return (
@@ -30,14 +24,7 @@ const MessageTop = () => {
         <Box display={{ initial: "block", md: "none" }} className="text-2xl">
           <FaChevronLeft />
         </Box>
-        <div className="avatar online">
-          <div className="w-10 rounded-full">
-            <img
-              src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-              alt="user"
-            />
-          </div>
-        </div>
+        <Avatar online={true} src="/user.jpg" />
         <Text weight="medium" as="p">
           Olivia
         </Text>
