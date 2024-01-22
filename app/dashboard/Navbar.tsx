@@ -7,6 +7,7 @@ import { LuMoon } from "react-icons/lu";
 import { MdExitToApp } from "react-icons/md";
 import { PiUserListLight } from "react-icons/pi";
 import Avatar from "../components/Avatar";
+import { signOut } from "next-auth/react";
 
 const Navbar = () => {
   return (
@@ -62,6 +63,7 @@ const Navbar = () => {
               <DropdownMenu.Item
                 className="flex gap-4"
                 style={{ cursor: "pointer" }}
+                onClick={() => signOut({ callbackUrl: "/login" })}
               >
                 <span>Logout</span> <MdExitToApp />
               </DropdownMenu.Item>
