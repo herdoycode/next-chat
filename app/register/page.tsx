@@ -49,11 +49,13 @@ const Login = () => {
 
         <form
           onSubmit={handleSubmit(({ name, email, password }) =>
-            axios
-              .post("/api/register", { name, email, password })
-              .then(() =>
-                signIn("credentials", { email, password, callbackUrl: "/" })
-              )
+            axios.post("/api/register", { name, email, password }).then(() =>
+              signIn("credentials", {
+                email,
+                password,
+                callbackUrl: "/dashboard",
+              })
+            )
           )}
           className="flex flex-col gap-5"
         >

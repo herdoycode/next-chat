@@ -49,7 +49,7 @@ const Login = () => {
             signIn("credentials", {
               email,
               password,
-              callbackUrl: "/",
+              callbackUrl: "/dashboard",
             })
           )}
           className="flex flex-col gap-5"
