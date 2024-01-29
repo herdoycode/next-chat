@@ -2,8 +2,19 @@
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { Box, Flex, Grid, Heading, Text, TextField } from "@radix-ui/themes";
 import Avatar from "../components/Avatar";
+import { useEffect, useState } from "react";
+import { Chat } from "@prisma/client";
+import axios from "axios";
 
 const Chats = () => {
+  const [chats, setChats] = useState<Chat[]>([]);
+
+  useEffect(() => {
+    axios
+      .get("/api/chats/65b749307d7b5c4170084311")
+      .then(({ data }) => setChats(data));
+  }, []);
+
   const activeUser = [1, 2, 3, 4];
   return (
     <Grid rows="210px 1fr" className="h-[100dvh]">
@@ -45,9 +56,9 @@ const Chats = () => {
         </Heading>
       </Box>
       <Box className="overflow-auto p-3">
-        {activeUser.map((u) => (
+        {chats.map((chat) => (
           <Flex
-            key={u}
+            key={chat.id}
             p="2"
             className="hover:bg-gray-200 transition cursor-pointer"
             mb="3"
@@ -59,7 +70,9 @@ const Chats = () => {
                   Herdoy Almamun
                 </Text>
                 <Text size="2" as="p" className="text-zinc-400">
-                  hey! there I&apos;m available
+                  {chat.lastMessage
+                    ? chat.lastMessage.slice(0, 30)
+                    : "hey! there I'm available"}
                 </Text>
               </Box>
             </Flex>
