@@ -7,9 +7,10 @@ import { LuMoon } from "react-icons/lu";
 import { MdExitToApp } from "react-icons/md";
 import { PiUserListLight } from "react-icons/pi";
 import Avatar from "../components/Avatar";
-import { signOut } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 
 const Navbar = () => {
+  const { data } = useSession();
   return (
     <Flex
       justify="between"
@@ -44,7 +45,7 @@ const Navbar = () => {
           <DropdownMenu.Root>
             <DropdownMenu.Trigger>
               <button className="outline-none border-none">
-                <Avatar online={false} src="/user.jpg" />
+                <Avatar online={false} src={data?.user?.image!} />
               </button>
             </DropdownMenu.Trigger>
             <DropdownMenu.Content>
